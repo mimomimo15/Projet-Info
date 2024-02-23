@@ -37,7 +37,5 @@ def calculer_rotate_point(point, angle, centre):
         x_rotated = xp-tx
         y_rotated = yp-ty
 
-        #test1
-
         return x_rotated, y_rotated
 

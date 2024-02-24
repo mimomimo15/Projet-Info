@@ -6,10 +6,10 @@ def calculer_reflexion_point(point, axe):
         point_r[0] *= -1
         return tuple(point_r)
 
-    elif axe == 'x':
-        point_r = [point[0], point[1]]
-        point_r[1] *= -1
-        return tuple(point_r)
+    # Si l'axe est X
+    point_r = [point[0], point[1]]
+    point_r[1] *= -1
+    return tuple(point_r)
 
 def calculer_rotate_point(point, angle, centre):
 

@@ -13,8 +13,9 @@ def calculer_reflexion_point(point, axe):
 
 def calculer_rotate_point(point, angle, centre):
 
+    angle_rad = angle * pi / 180
+
     if centre[0] == 0 and centre[1] == 0:
-        angle_rad = angle * pi/180
         xp = cos(angle_rad) * point[0] - sin(angle_rad) * point[1]
         yp = sin(angle_rad) * point[0] + cos(angle_rad) * point[1]
         xp = round(xp,2)

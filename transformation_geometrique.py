@@ -1,4 +1,4 @@
-from math import sin,cos,pi
+from math import sin,cos,tan,pi
 def calculer_reflexion_point(point, axe):
 
     if axe == 'y':
@@ -18,9 +18,9 @@ def calculer_rotate_point(point, angle, centre):
     if centre[0] == 0 and centre[1] == 0:
         xp = cos(angle_rad) * point[0] - sin(angle_rad) * point[1]
         yp = sin(angle_rad) * point[0] + cos(angle_rad) * point[1]
-        xp = round(xp,2)
-        yp = round(yp,2)
-        return xp,yp
+        xp = round(xp, 2)
+        yp = round(yp, 2)
+        return xp, yp
 
     else:
         #Transaltion du centre vers l'origine
@@ -39,4 +39,17 @@ def calculer_rotate_point(point, angle, centre):
         y_rotated = yp-ty
 
         return x_rotated, y_rotated
+
+def calculer_inclinaison_point(point, angle, direction):
+    angle_rad = angle * pi / 180
+    m = tan(angle_rad)
+    y = point[1]
+    x = point[0]
+
+    if direction == "x":
+        xp = round(x + m*y,2)
+        return xp, y
+
+    yp = round(m*x + y,2)
+    return x, yp
 

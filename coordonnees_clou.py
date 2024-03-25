@@ -27,8 +27,8 @@ def appliquer_transormation_clou(liste, center_rotation, angle_rotation, angle_i
     liste_inclinaison = []
 
     for i in range(0, len(liste)):
-        liste_reflexion.append(calculer_reflexion_point(liste[i], axe_reflexion))
-        liste_rotate.append(calculer_rotate_point(liste[i], angle_rotation, center_rotation))
-        liste_inclinaison.append(liste[i], angle_inclinaison, direction)
+        liste_reflexion.append(calculer_reflexion_point(liste[i][1], axe_reflexion))
+        liste_rotate.append(calculer_rotate_point(liste[i][1], angle_rotation, center_rotation))
+        liste_inclinaison.append((liste[i][1], angle_inclinaison, direction))
 
         return liste_reflexion, liste_rotate, liste_inclinaison

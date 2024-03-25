@@ -21,14 +21,14 @@ def calculer_coordonnees_clou(A, B, C, D, E):
 
     return list
 
-def appliquer_transormation_clou(liste, center_rotation, angle_rotation, angle_inclinaison, direction, axe_reflexion):
+def appliquer_transormation_clou(liste, center_rotation, angle_rotation, direction, angle_inclinaison, axe_reflexion):
     liste_reflexion = []
     liste_rotate = []
     liste_inclinaison = []
 
-    for i in range(0, len(liste)):
+    for i in range(len(liste)):
         liste_reflexion.append(calculer_reflexion_point(liste[i][1], axe_reflexion))
         liste_rotate.append(calculer_rotate_point(liste[i][1], angle_rotation, center_rotation))
-        liste_inclinaison.append((liste[i][1], angle_inclinaison, direction))
+        liste_inclinaison.append(calculer_inclinaison_point(liste[i][1], angle_inclinaison, direction))
 
-        return liste_reflexion, liste_rotate, liste_inclinaison
+    return liste_reflexion, liste_rotate, liste_inclinaison

@@ -9,7 +9,7 @@ def calculer_coordonnees_clou(A, B, C, D, E):
     pk_0 = (B/2 + E, 0)
     pk_1 = (B/2, -C/2)
     pk_2 = (B/2, C/2)
-    liste_point = [
+    list = [
         ('pt_0', pt_0),
         ('pt_1', pt_1),
         ('pt_2', pt_2),
@@ -19,7 +19,7 @@ def calculer_coordonnees_clou(A, B, C, D, E):
         ('pk_1', pk_1)
     ]
 
-    return liste_point
+    return list
 
 def appliquer_transormation_clou(liste, center_rotation, angle_rotation, angle_inclinaison, direction, axe_reflexion):
     liste_reflexion = []

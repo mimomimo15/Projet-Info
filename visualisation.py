@@ -48,7 +48,6 @@ def visualiser_points_clou(coordonnees_et_noms):
     plt.axis('equal')
     plt.grid(True)
     plt.show()  # Affichage de la figure
-
 # Fonction pour visualiser une image originale et son équivalent en niveaux de gris.
 def visualiser_image_couleur_ng(chemin_vers_image_org, chemin_vers_image_ng):
     # Chargement des images

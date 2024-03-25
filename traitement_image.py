@@ -3,6 +3,7 @@ def appliquer_rgb_to_gry(chemin_image_couleur,chemin_sauvegarde_gris):
     img_gris = []
     with open(chemin_image_couleur,'r') as img_couleur:
         str_couleur = img_couleur.read()
+
         # calcul le niveaux de gris pour chaque pixel
         for i in range(len(str_couleur)):
             for j in range(len(str_couleur[0])):

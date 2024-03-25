@@ -2,11 +2,8 @@ from math import sin,cos,tan,pi
 def calculer_reflexion_point(point, axe):
 
     if axe == 'y':
-
         return -point[0], point[1]
-
     # Si l'axe est X
-
     return point[0], -point[1]
 
 def calculer_rotate_point(point, angle, centre):

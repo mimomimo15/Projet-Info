@@ -28,6 +28,25 @@ def calculer_histogramme(image, w):
 
     return tableau_hist
 
+def calculer_distance_1(h1, h2):
+
+    somme = 0
+    for i in range(len(h1)):
+        somme += (h1[i] - h2[i])**2
+    return round(somme**0.5, 2)
+
+
+def calculer_distance_2(h1, h2):
+
+    somme = 0
+    for i in range(len(h1)):
+        somme += abs((h1[i] - h2[i]))
+        round(somme, 2)
+    return somme
+
+
+
+
 
 
 

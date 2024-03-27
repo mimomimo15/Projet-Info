@@ -12,3 +12,17 @@ def test_calculer_histogramme():
                        [2, 3, 2, 2]]
 
     assert np.array_equal(calculer_histogramme(tableau, 3), tableau_attendu)
+
+def test_calculer_distance1():
+
+    h1 = [1, 2, 3, 4, 5]
+    h2 = [2, 3, 4, 5, 6]
+
+    assert calculer_distance_1(h1, h2) == 2.24
+
+def test_calculer_distance2():
+
+    h1 = [1, 2, 3, 4, 5]
+    h2 = [2, 3, 4, 5, 6]
+
+    assert calculer_distance_2(h1, h2) == 5

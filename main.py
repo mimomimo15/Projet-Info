@@ -21,7 +21,7 @@ if __name__ == '__main__':
     path_image_ng = 'image_niveaux_de_gris.jpg'
 
     # Conversion d'une image couleur en niveaux de gris et visualisation des deux images
-    rgb_to_gry(path_image_orig, path_image_ng)
+    appliquer_rgb_to_gry(path_image_orig, path_image_ng)
     visualiser_image_couleur_ng(path_image_orig, path_image_ng)
 
     # Ouverture de l'image en niveaux de gris et conversion en tableau NumPy

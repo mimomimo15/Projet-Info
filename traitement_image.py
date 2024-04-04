@@ -4,22 +4,22 @@ from math import log10
 
 #  ____________CORRIGER LES TABLEAUX LES UTILISER ET RETOURNER EN NUMPY__________________
 
-def appliquer_rgb_to_gry(chemin_image_couleur,chemin_sauvegarde_gris):
+def appliquer_rgb_to_gry(chemin_image_couleur, chemin_sauvegarde_gris):
 
-    img_gris = []
-    with open(chemin_image_couleur,'r') as img_couleur:
-        str_couleur = img_couleur.read()
+    imcolor = Image.open(chemin_image_couleur)
+    width_x = imcolor.size[0]
+    width_y = imcolor.size[1]
+    pixel = imcolor.load()
+    for i in range(width_x):
+        for j in range(width_y):
+            rgb_value = pixel[i, j]
+            r = rgb_value[0]
+            g = rgb_value[1]
+            b = rgb_value[2]
+            average = (r + g + b) / 3
+            pixel[i, j] = (int(average), int(average), int(average))
 
-        # calcul le niveaux de gris pour chaque pixel
-        for i in range(len(str_couleur)):
-                r, g, b = str_couleur[i][0], str_couleur[i][1], str_couleur[i][2]
-                niveau_gris = (r+g+b) // 3
-                img_gris.append(niveau_gris)
-                #Reset la moyenne
-                moyenne = 0
-    with open(chemin_sauvegarde_gris, 'w') as image_grise:
-        image_grise.write(img_gris)
-
+    imcolor.save(chemin_sauvegarde_gris)
 def appliquer_transformation_1(tab_gris):
 
     #Création du tableau transformé de dimensions identique au tableau recus
